@@ -16,6 +16,9 @@ Tablet  540px - 959px (čti jako 540px a víc)
 PC      960px a víc
 */
 
+
+
+/* první varianta-------------
 h1 {
 	text-align: center;
 }
@@ -82,4 +85,70 @@ h1 {
 		text-align: center;
 		margin-left: 0;
 	}
+}
+*/
+
+
+
+/*Zkouším znovu - druhá varianta*/
+
+h1 {
+	text-align: center;
+}
+
+.card {
+	padding: 25px;
+	border: 1px solid #c0c0c0;
+	border-radius: 10px;
+	box-shadow: 3px 3px 6px #dddddd;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.profil img {
+	border-radius: 50%;
+}
+
+.card-content p {
+	margin-bottom: 0;
+}
+
+@media screen and (min-width: 600px){
+	.content {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.card {
+		flex: 1 1 40vw;
+		margin-bottom: 0;
+		display: flex;
+	}
+	.profil img {
+		width: 90px;
+		flex: 1 1 30%;
+	} 
+	.card-content {
+		flex: 1 1 70%;
+		text-align: left;
+		margin-left: 15px;
+	}	
+}
+
+@media screen and (min-width: 1000px){
+	.content {
+		flex-wrap: nowrap;
+	}
+	.card {
+		flex: 1 1 calc(100% / 4);
+		flex-direction: column;	
+		align-items: center;
+	}
+	.profil img {
+		width: 120px;
+	}
+	.card-content {
+		text-align: center;
+		margin-left: 0;
+	}	
 }
